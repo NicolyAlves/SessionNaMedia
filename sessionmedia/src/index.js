@@ -3,19 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 
-import './styles.css'
+import Pedido from "./comunicacaoComps/finalizacaoPedido/pedido";
+import ConclusaoPedido from "./comunicacaoComps/finalizacaoPedido/conclusao/index";
 
+import Carrinho from "./carrinho";
 
-
-import Contador from "./sessionmedia/comunicacaoComps/contador";
-import Pedido from "./sessionmedia/finalizacaoPedido/pedido";
-import ConclusaoPedido from "./sessionmedia/comunicacaoComps/finalizacaoPedido/conclusao";
-
-import Carrinho from "./sessionmedia/src/carrinho";
-
-import App from './sessionmedia/home'
-import DetalheProduto from './sessionmedia/detalheProduto'
-import Carrinho from './sessionmedia/carrinho'
+import App from './home'
+import DetalheProduto from './detalheProduto'
 
 
 
@@ -29,7 +23,7 @@ ReactDOM.render(
         <Route path="/carrinho" component={Carrinho} />
         
       
-        <Route path="/opa/contador" exact={true} component={Contador} />
+        
         <Route path="/opa/pedido" component={Pedido} />
         <Route path="/opa/conclusao" component={ConclusaoPedido} />
 

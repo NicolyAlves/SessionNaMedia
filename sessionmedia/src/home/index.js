@@ -93,9 +93,7 @@ export default function Home() {
 
       <h1> Sejam bem-vindos! </h1>
       <br />
-      
-      <button onClick={listar}> Listar </button>
-      <br />
+    
 
         <button onClick={listar}>Listar</button>
           
