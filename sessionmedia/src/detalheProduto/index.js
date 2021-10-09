@@ -6,7 +6,7 @@ import { Container } from './styled'
 
 
 export default function DetalheProduto(props) {
-  const [produto, setProduto] = useState(props.location.state);  
+  const [produto, setProduto] = useState(props.location.state);  // é o que passou em index,js do proudo, props = info = variavel de estado = json 
   const navigation = useHistory();
   
 
@@ -24,7 +24,7 @@ export default function DetalheProduto(props) {
     // Verifica se o produto em questão já está no carrinho pelo Id e pela função some()
     // Se o produto não existir, adiciona o produto no carrinho copiando todos os campos do produto
     // e adicionando o campo novo qtd com valor 1
-    if (carrinho.some(item => item.id === produto.id) === false)
+    if (carrinho.some(item => item.id === produto.id) === false) 
         carrinho.push({...produto, qtd: 1 });
  
     

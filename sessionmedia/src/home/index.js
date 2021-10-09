@@ -1,14 +1,7 @@
-import { CarouselConfig } from './config';
-
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
-import { Container } from './styled'
-
 import Produto from '../produto'
 import { useState } from 'react'
 
-
+import { Container } from './styled';
 
 
 export default function Home() {
@@ -104,26 +97,17 @@ export default function Home() {
       <button onClick={listar}> Listar </button>
       <br />
 
-      <div className="lista-produtos">
-
-        <Carousel 
-          responsive={CarouselConfig}
-          infinite={true}
-          showDots={true}
-          containerClass="carousel-container"
-          >
+        <button onClick={listar}>Listar</button>
           
-          {produtos.map(item => 
+          <div className="lista-produtos">
+               {produtos.map(item => 
               <Produto 
                key={item.id}
                info={item} />
           )}
 
-        </Carousel>
-
-      </div>
-
-
+          </div>
+         
     </Container>
   )
 
